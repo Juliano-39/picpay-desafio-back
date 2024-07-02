@@ -1,6 +1,5 @@
 package com.picpaysimplificado.entities.dto;
 
-import jakarta.persistence.Column;
 import lombok.*;
 
 @Getter

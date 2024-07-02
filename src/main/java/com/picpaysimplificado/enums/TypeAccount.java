@@ -1,6 +1,6 @@
 package com.picpaysimplificado.enums;
 
-public enum Type {
+public enum TypeAccount {
     COMMON,
     MERCHANT
 }

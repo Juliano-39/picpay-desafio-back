@@ -1,6 +1,6 @@
 package com.picpaysimplificado.entities.model;
 
-import com.picpaysimplificado.enums.Type;
+import com.picpaysimplificado.enums.TypeAccount;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -11,8 +11,8 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity(name = "account")
-@Table(name = "account")
 @EqualsAndHashCode(of = "id")
+@Table(name = "account")
 public class Account {
 
     @Id
@@ -23,10 +23,11 @@ public class Account {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @Enumerated(value = EnumType.STRING)
     @Column(name = "type")
-    private Type type;
+    @Enumerated(value = EnumType.STRING)
+    private TypeAccount type;
 
+    @Column(name = "amount")
     private BigDecimal amount;
 
 

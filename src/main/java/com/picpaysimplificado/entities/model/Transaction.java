@@ -16,9 +16,14 @@ public class Transaction {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Account sender_id;
+    @ManyToOne
+    @JoinColumn(name = "sender_id")
+    private Account senderId;
 
-    private Account receiver_id;
+    @ManyToOne
+    @JoinColumn(name = "receiver_id")
+    private Account receiverId;
 
+    @Column(name = "value")
     private Float value;
 }
